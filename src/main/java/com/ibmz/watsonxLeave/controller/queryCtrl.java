@@ -2,13 +2,11 @@ package com.ibmz.watsonxLeave.controller;
 
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
-import com.ibm.db2.jcc.DB2ConnectionPoolDataSource;
+import com.ibmz.watsonxLeave.annotation.AuthVerify;
 import com.ibmz.watsonxLeave.dto.Employee;
 import org.springframework.web.bind.annotation.*;
 
-import javax.sql.PooledConnection;
 import java.sql.*;
-import java.util.Map;
 
 @RestController
 
@@ -44,7 +42,7 @@ public class queryCtrl {
         employee.setEmpId(id);
         return employee;
     }
-
+@AuthVerify
     @RequestMapping(value = "/user", method = RequestMethod.POST)
     public Employee queryUser(@RequestBody String param) throws SQLException, ClassNotFoundException {
         Connection conn = DriverManager.getConnection("jdbc:db2://19af6446-6171-4641-8aba-9dcff8e1b6ff.c1ogj3sd0tgtu0lqde00.databases.appdomain.cloud:30699/bludb:user=vrn32906;password=o5Nwlh3rbavWaXVs;sslConnection=true;" );

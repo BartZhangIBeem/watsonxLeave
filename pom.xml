@@ -54,6 +54,11 @@
 			<version>1.18.30</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.1.0</version>
+		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
 
@@ -73,8 +78,14 @@
 			<artifactId>spring-beans</artifactId>
 			<version>6.1.2</version>
 		</dependency>
+		<dependency>
+			<groupId>com.auth0</groupId>
+			<artifactId>java-jwt</artifactId>
+			<version>4.4.0</version>
+		</dependency>
 
-	</dependencies>
+
+    </dependencies>
 
 	<build>
 		<plugins>

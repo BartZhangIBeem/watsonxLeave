@@ -1,0 +1,598 @@
+2024-01-22 10:13:34.671 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == Starting WatsonxLeaveApplication using Java 17.0.9 with PID 23896 (C:\Users\ZZ04MR672\Desktop\watsonLeaveDemo\watsonxLeave\target\classes started by BartZhang in C:\Users\ZZ04MR672\Desktop\watsonLeaveDemo\watsonxLeave)
+2024-01-22 10:13:34.682 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == No active profile set, falling back to 1 default profile: "default"
+2024-01-22 10:13:36.451 === [main] == [34mINFO [0;39m == o.s.boot.web.embedded.tomcat.TomcatWebServer == Tomcat initialized with port 8080 (http)
+2024-01-22 10:13:36.475 === [main] == [34mINFO [0;39m == org.apache.catalina.core.StandardService == Starting service [Tomcat]
+2024-01-22 10:13:36.475 === [main] == [34mINFO [0;39m == org.apache.catalina.core.StandardEngine == Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-22 10:13:36.571 === [main] == [34mINFO [0;39m == o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] == Initializing Spring embedded WebApplicationContext
+2024-01-22 10:13:36.572 === [main] == [34mINFO [0;39m == o.s.b.w.s.c.ServletWebServerApplicationContext == Root WebApplicationContext: initialization completed in 1800 ms
+2024-01-22 10:13:37.325 === [main] == [34mINFO [0;39m == o.s.boot.web.embedded.tomcat.TomcatWebServer == Tomcat started on port 8080 (http) with context path ''
+2024-01-22 10:13:37.349 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == Started WatsonxLeaveApplication in 3.582 seconds (process running for 4.503)
+2024-01-22 10:13:55.830 === [http-nio-8080-exec-1] == [34mINFO [0;39m == o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] == Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-22 10:13:55.831 === [http-nio-8080-exec-1] == [34mINFO [0;39m == org.springframework.web.servlet.DispatcherServlet == Initializing Servlet 'dispatcherServlet'
+2024-01-22 10:13:55.832 === [http-nio-8080-exec-1] == [34mINFO [0;39m == org.springframework.web.servlet.DispatcherServlet == Completed initialization in 0 ms
+2024-01-22 10:13:55.872 === [http-nio-8080-exec-1] == [1;31mERROR[0;39m == o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] == Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.ibmz.watsonxLeave.service.TokenService.verify(java.lang.String)" because "this.tokenService" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.ibmz.watsonxLeave.service.TokenService.verify(java.lang.String)" because "this.tokenService" is null
+	at com.ibmz.watsonxLeave.intercepter.AuthenticationInterceptor.preHandle(AuthenticationInterceptor.java:25)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:857)
+2024-01-22 10:14:30.523 === [http-nio-8080-exec-4] == [31mWARN [0;39m == o.s.w.s.m.support.DefaultHandlerExceptionResolver == Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.lang.String com.ibmz.watsonxLeave.controller.loginCtrl.getToken(java.lang.String)]
+2024-01-22 10:18:49.415 === [http-nio-8080-exec-9] == [1;31mERROR[0;39m == o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] == Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.ibmz.watsonxLeave.service.TokenService.verify(java.lang.String)" because "this.tokenService" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.ibmz.watsonxLeave.service.TokenService.verify(java.lang.String)" because "this.tokenService" is null
+	at com.ibmz.watsonxLeave.intercepter.AuthenticationInterceptor.preHandle(AuthenticationInterceptor.java:25)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:857)
+2024-01-22 10:19:02.537 === [http-nio-8080-exec-5] == [1;31mERROR[0;39m == o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] == Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.ibmz.watsonxLeave.service.TokenService.verify(java.lang.String)" because "this.tokenService" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.ibmz.watsonxLeave.service.TokenService.verify(java.lang.String)" because "this.tokenService" is null
+	at com.ibmz.watsonxLeave.intercepter.AuthenticationInterceptor.preHandle(AuthenticationInterceptor.java:25)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:857)
+2024-01-22 10:19:23.587 === [http-nio-8080-exec-3] == [1;31mERROR[0;39m == o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] == Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.ibmz.watsonxLeave.service.TokenService.verify(java.lang.String)" because "this.tokenService" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.ibmz.watsonxLeave.service.TokenService.verify(java.lang.String)" because "this.tokenService" is null
+	at com.ibmz.watsonxLeave.intercepter.AuthenticationInterceptor.preHandle(AuthenticationInterceptor.java:25)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:857)
+2024-01-22 10:20:03.910 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == Starting WatsonxLeaveApplication using Java 17.0.9 with PID 39904 (C:\Users\ZZ04MR672\Desktop\watsonLeaveDemo\watsonxLeave\target\classes started by BartZhang in C:\Users\ZZ04MR672\Desktop\watsonLeaveDemo\watsonxLeave)
+2024-01-22 10:20:03.917 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == No active profile set, falling back to 1 default profile: "default"
+2024-01-22 10:20:05.587 === [main] == [34mINFO [0;39m == o.s.boot.web.embedded.tomcat.TomcatWebServer == Tomcat initialized with port 8080 (http)
+2024-01-22 10:20:05.600 === [main] == [34mINFO [0;39m == org.apache.catalina.core.StandardService == Starting service [Tomcat]
+2024-01-22 10:20:05.601 === [main] == [34mINFO [0;39m == org.apache.catalina.core.StandardEngine == Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-22 10:20:05.690 === [main] == [34mINFO [0;39m == o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] == Initializing Spring embedded WebApplicationContext
+2024-01-22 10:20:05.690 === [main] == [34mINFO [0;39m == o.s.b.w.s.c.ServletWebServerApplicationContext == Root WebApplicationContext: initialization completed in 1585 ms
+2024-01-22 10:20:06.441 === [main] == [34mINFO [0;39m == o.s.boot.web.embedded.tomcat.TomcatWebServer == Tomcat started on port 8080 (http) with context path ''
+2024-01-22 10:20:06.467 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == Started WatsonxLeaveApplication in 3.506 seconds (process running for 4.252)
+2024-01-22 10:24:01.031 === [http-nio-8080-exec-3] == [34mINFO [0;39m == o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] == Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-22 10:24:01.039 === [http-nio-8080-exec-3] == [34mINFO [0;39m == org.springframework.web.servlet.DispatcherServlet == Initializing Servlet 'dispatcherServlet'
+2024-01-22 10:24:01.044 === [http-nio-8080-exec-3] == [34mINFO [0;39m == org.springframework.web.servlet.DispatcherServlet == Completed initialization in 0 ms
+2024-01-22 10:24:01.124 === [http-nio-8080-exec-3] == [1;31mERROR[0;39m == o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] == Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.ibmz.watsonxLeave.service.TokenService.verify(java.lang.String)" because "this.tokenService" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.ibmz.watsonxLeave.service.TokenService.verify(java.lang.String)" because "this.tokenService" is null
+	at com.ibmz.watsonxLeave.intercepter.AuthenticationInterceptor.preHandle(AuthenticationInterceptor.java:25)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:857)
+2024-01-22 10:30:17.264 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == Starting WatsonxLeaveApplication using Java 17.0.9 with PID 38732 (C:\Users\ZZ04MR672\Desktop\watsonLeaveDemo\watsonxLeave\target\classes started by BartZhang in C:\Users\ZZ04MR672\Desktop\watsonLeaveDemo\watsonxLeave)
+2024-01-22 10:30:17.274 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == No active profile set, falling back to 1 default profile: "default"
+2024-01-22 10:30:19.903 === [main] == [34mINFO [0;39m == o.s.boot.web.embedded.tomcat.TomcatWebServer == Tomcat initialized with port 8080 (http)
+2024-01-22 10:30:19.929 === [main] == [34mINFO [0;39m == org.apache.catalina.core.StandardService == Starting service [Tomcat]
+2024-01-22 10:30:19.931 === [main] == [34mINFO [0;39m == org.apache.catalina.core.StandardEngine == Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-22 10:30:20.082 === [main] == [34mINFO [0;39m == o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] == Initializing Spring embedded WebApplicationContext
+2024-01-22 10:30:20.082 === [main] == [34mINFO [0;39m == o.s.b.w.s.c.ServletWebServerApplicationContext == Root WebApplicationContext: initialization completed in 2617 ms
+2024-01-22 10:30:21.130 === [main] == [34mINFO [0;39m == o.s.boot.web.embedded.tomcat.TomcatWebServer == Tomcat started on port 8080 (http) with context path ''
+2024-01-22 10:30:21.158 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == Started WatsonxLeaveApplication in 5.329 seconds (process running for 6.553)
+2024-01-22 10:31:04.545 === [http-nio-8080-exec-4] == [34mINFO [0;39m == o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] == Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-22 10:31:04.546 === [http-nio-8080-exec-4] == [34mINFO [0;39m == org.springframework.web.servlet.DispatcherServlet == Initializing Servlet 'dispatcherServlet'
+2024-01-22 10:31:04.549 === [http-nio-8080-exec-4] == [34mINFO [0;39m == org.springframework.web.servlet.DispatcherServlet == Completed initialization in 2 ms
+2024-01-22 10:31:04.640 === [http-nio-8080-exec-4] == [1;31mERROR[0;39m == o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] == Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.ibmz.watsonxLeave.service.TokenService.verify(java.lang.String)" because "this.tokenService" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.ibmz.watsonxLeave.service.TokenService.verify(java.lang.String)" because "this.tokenService" is null
+	at com.ibmz.watsonxLeave.intercepter.AuthenticationInterceptor.preHandle(AuthenticationInterceptor.java:20)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:857)
+2024-01-22 10:35:25.272 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == Starting WatsonxLeaveApplication using Java 17.0.9 with PID 32260 (C:\Users\ZZ04MR672\Desktop\watsonLeaveDemo\watsonxLeave\target\classes started by BartZhang in C:\Users\ZZ04MR672\Desktop\watsonLeaveDemo\watsonxLeave)
+2024-01-22 10:35:25.280 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == No active profile set, falling back to 1 default profile: "default"
+2024-01-22 10:35:28.576 === [main] == [34mINFO [0;39m == o.s.boot.web.embedded.tomcat.TomcatWebServer == Tomcat initialized with port 8080 (http)
+2024-01-22 10:35:28.606 === [main] == [34mINFO [0;39m == org.apache.catalina.core.StandardService == Starting service [Tomcat]
+2024-01-22 10:35:28.606 === [main] == [34mINFO [0;39m == org.apache.catalina.core.StandardEngine == Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-22 10:35:28.839 === [main] == [34mINFO [0;39m == o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] == Initializing Spring embedded WebApplicationContext
+2024-01-22 10:35:28.839 === [main] == [34mINFO [0;39m == o.s.b.w.s.c.ServletWebServerApplicationContext == Root WebApplicationContext: initialization completed in 3388 ms
+2024-01-22 10:35:30.291 === [main] == [34mINFO [0;39m == o.s.boot.web.embedded.tomcat.TomcatWebServer == Tomcat started on port 8080 (http) with context path ''
+2024-01-22 10:35:30.324 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == Started WatsonxLeaveApplication in 6.25 seconds (process running for 12.034)
+2024-01-22 10:35:47.953 === [http-nio-8080-exec-2] == [34mINFO [0;39m == o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] == Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-22 10:35:47.955 === [http-nio-8080-exec-2] == [34mINFO [0;39m == org.springframework.web.servlet.DispatcherServlet == Initializing Servlet 'dispatcherServlet'
+2024-01-22 10:35:47.959 === [http-nio-8080-exec-2] == [34mINFO [0;39m == org.springframework.web.servlet.DispatcherServlet == Completed initialization in 2 ms
+2024-01-22 10:35:48.007 === [http-nio-8080-exec-2] == [1;31mERROR[0;39m == o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] == Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.ibmz.watsonxLeave.service.TokenService.verify(java.lang.String)" because "this.tokenService" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.ibmz.watsonxLeave.service.TokenService.verify(java.lang.String)" because "this.tokenService" is null
+	at com.ibmz.watsonxLeave.intercepter.AuthenticationInterceptor.preHandle(AuthenticationInterceptor.java:20)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:857)
+2024-01-22 10:39:47.457 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == Starting WatsonxLeaveApplication using Java 17.0.9 with PID 36300 (C:\Users\ZZ04MR672\Desktop\watsonLeaveDemo\watsonxLeave\target\classes started by BartZhang in C:\Users\ZZ04MR672\Desktop\watsonLeaveDemo\watsonxLeave)
+2024-01-22 10:39:47.463 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == No active profile set, falling back to 1 default profile: "default"
+2024-01-22 10:39:50.146 === [main] == [34mINFO [0;39m == o.s.boot.web.embedded.tomcat.TomcatWebServer == Tomcat initialized with port 8080 (http)
+2024-01-22 10:39:50.167 === [main] == [34mINFO [0;39m == org.apache.catalina.core.StandardService == Starting service [Tomcat]
+2024-01-22 10:39:50.167 === [main] == [34mINFO [0;39m == org.apache.catalina.core.StandardEngine == Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-22 10:39:50.272 === [main] == [34mINFO [0;39m == o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] == Initializing Spring embedded WebApplicationContext
+2024-01-22 10:39:50.273 === [main] == [34mINFO [0;39m == o.s.b.w.s.c.ServletWebServerApplicationContext == Root WebApplicationContext: initialization completed in 2545 ms
+2024-01-22 10:39:51.020 === [main] == [34mINFO [0;39m == o.s.boot.web.embedded.tomcat.TomcatWebServer == Tomcat started on port 8080 (http) with context path ''
+2024-01-22 10:39:51.040 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == Started WatsonxLeaveApplication in 5.092 seconds (process running for 6.008)
+2024-01-22 10:39:55.112 === [http-nio-8080-exec-1] == [34mINFO [0;39m == o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] == Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-22 10:39:55.113 === [http-nio-8080-exec-1] == [34mINFO [0;39m == org.springframework.web.servlet.DispatcherServlet == Initializing Servlet 'dispatcherServlet'
+2024-01-22 10:39:55.115 === [http-nio-8080-exec-1] == [34mINFO [0;39m == org.springframework.web.servlet.DispatcherServlet == Completed initialization in 2 ms
+2024-01-22 10:39:55.148 === [http-nio-8080-exec-1] == [1;31mERROR[0;39m == o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] == Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.ibmz.watsonxLeave.service.TokenService.verify(java.lang.String)" because "this.tokenService" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.ibmz.watsonxLeave.service.TokenService.verify(java.lang.String)" because "this.tokenService" is null
+	at com.ibmz.watsonxLeave.intercepter.AuthenticationInterceptor.preHandle(AuthenticationInterceptor.java:20)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:857)
+2024-01-22 10:54:34.283 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == Starting WatsonxLeaveApplication using Java 17.0.9 with PID 32528 (C:\Users\ZZ04MR672\Desktop\watsonLeaveDemo\watsonxLeave\target\classes started by BartZhang in C:\Users\ZZ04MR672\Desktop\watsonLeaveDemo\watsonxLeave)
+2024-01-22 10:54:34.288 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == No active profile set, falling back to 1 default profile: "default"
+2024-01-22 10:54:35.868 === [main] == [34mINFO [0;39m == o.s.boot.web.embedded.tomcat.TomcatWebServer == Tomcat initialized with port 8080 (http)
+2024-01-22 10:54:35.883 === [main] == [34mINFO [0;39m == org.apache.catalina.core.StandardService == Starting service [Tomcat]
+2024-01-22 10:54:35.884 === [main] == [34mINFO [0;39m == org.apache.catalina.core.StandardEngine == Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-22 10:54:35.986 === [main] == [34mINFO [0;39m == o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] == Initializing Spring embedded WebApplicationContext
+2024-01-22 10:54:35.987 === [main] == [34mINFO [0;39m == o.s.b.w.s.c.ServletWebServerApplicationContext == Root WebApplicationContext: initialization completed in 1580 ms
+2024-01-22 10:54:36.119 === [main] == [31mWARN [0;39m == o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext == Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'permissionInterceptor' defined in class path resource [com/ibmz/watsonxLeave/config/WebMVCConfig.class]: Post-processing of merged bean definition failed
+2024-01-22 10:54:36.124 === [main] == [34mINFO [0;39m == org.apache.catalina.core.StandardService == Stopping service [Tomcat]
+2024-01-22 10:54:36.154 === [main] == [34mINFO [0;39m == o.s.b.a.logging.ConditionEvaluationReportLogger == 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-01-22 10:54:36.192 === [main] == [1;31mERROR[0;39m == org.springframework.boot.SpringApplication == Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'permissionInterceptor' defined in class path resource [com/ibmz/watsonxLeave/config/WebMVCConfig.class]: Post-processing of merged bean definition failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:960)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:464)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1358)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1347)
+	at com.ibmz.watsonxLeave.WatsonxLeaveApplication.main(WatsonxLeaveApplication.java:10)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.ibmz.watsonxLeave.intercepter.AuthenticationInterceptor] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@28255c32]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.buildLifecycleMetadata(InitDestroyAnnotationBeanPostProcessor.java:297)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.findLifecycleMetadata(InitDestroyAnnotationBeanPostProcessor.java:274)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.findLifecycleMetadata(InitDestroyAnnotationBeanPostProcessor.java:203)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(InitDestroyAnnotationBeanPostProcessor.java:182)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:311)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1084)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	... 15 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: javax.servlet.http.HttpServletRequest
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:1180)
+	at java.base/java.lang.Class.getMethodSet(Class.java:1848)
+	at java.base/java.lang.Class.getMethods(Class.java:1774)
+	at org.springframework.util.ReflectionUtils.findDefaultMethodsOnInterfaces(ReflectionUtils.java:493)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:466)
+	... 23 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.servlet.http.HttpServletRequest
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:827)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:1095)
+	at java.base/java.lang.Class.getDeclaredMethodsImpl(Native Method)
+	... 28 common frames omitted
+2024-01-22 10:54:55.697 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == Starting WatsonxLeaveApplication using Java 17.0.9 with PID 22364 (C:\Users\ZZ04MR672\Desktop\watsonLeaveDemo\watsonxLeave\target\classes started by BartZhang in C:\Users\ZZ04MR672\Desktop\watsonLeaveDemo\watsonxLeave)
+2024-01-22 10:54:55.701 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == No active profile set, falling back to 1 default profile: "default"
+2024-01-22 10:54:57.148 === [main] == [34mINFO [0;39m == o.s.boot.web.embedded.tomcat.TomcatWebServer == Tomcat initialized with port 8080 (http)
+2024-01-22 10:54:57.159 === [main] == [34mINFO [0;39m == org.apache.catalina.core.StandardService == Starting service [Tomcat]
+2024-01-22 10:54:57.160 === [main] == [34mINFO [0;39m == org.apache.catalina.core.StandardEngine == Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-22 10:54:57.230 === [main] == [34mINFO [0;39m == o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] == Initializing Spring embedded WebApplicationContext
+2024-01-22 10:54:57.230 === [main] == [34mINFO [0;39m == o.s.b.w.s.c.ServletWebServerApplicationContext == Root WebApplicationContext: initialization completed in 1417 ms
+2024-01-22 10:54:57.337 === [main] == [31mWARN [0;39m == o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext == Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'permissionInterceptor' defined in class path resource [com/ibmz/watsonxLeave/config/WebMVCConfig.class]: Post-processing of merged bean definition failed
+2024-01-22 10:54:57.340 === [main] == [34mINFO [0;39m == org.apache.catalina.core.StandardService == Stopping service [Tomcat]
+2024-01-22 10:54:57.376 === [main] == [34mINFO [0;39m == o.s.b.a.logging.ConditionEvaluationReportLogger == 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-01-22 10:54:57.405 === [main] == [1;31mERROR[0;39m == org.springframework.boot.SpringApplication == Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'permissionInterceptor' defined in class path resource [com/ibmz/watsonxLeave/config/WebMVCConfig.class]: Post-processing of merged bean definition failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:960)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:464)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1358)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1347)
+	at com.ibmz.watsonxLeave.WatsonxLeaveApplication.main(WatsonxLeaveApplication.java:10)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.ibmz.watsonxLeave.intercepter.AuthenticationInterceptor] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@acdff3b9]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.buildLifecycleMetadata(InitDestroyAnnotationBeanPostProcessor.java:297)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.findLifecycleMetadata(InitDestroyAnnotationBeanPostProcessor.java:274)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.findLifecycleMetadata(InitDestroyAnnotationBeanPostProcessor.java:203)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(InitDestroyAnnotationBeanPostProcessor.java:182)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:311)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1084)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	... 15 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: javax.servlet.http.HttpServletRequest
+	at java.base/java.lang.Class.getDeclaredMethodsImpl(Native Method)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:1180)
+	at java.base/java.lang.Class.getMethodSet(Class.java:1848)
+	at java.base/java.lang.Class.getMethods(Class.java:1774)
+	at org.springframework.util.ReflectionUtils.findDefaultMethodsOnInterfaces(ReflectionUtils.java:493)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:466)
+	... 23 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.servlet.http.HttpServletRequest
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:827)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:1095)
+	... 29 common frames omitted
+2024-01-22 10:56:45.165 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == Starting WatsonxLeaveApplication using Java 17.0.9 with PID 18664 (C:\Users\ZZ04MR672\Desktop\watsonLeaveDemo\watsonxLeave\target\classes started by BartZhang in C:\Users\ZZ04MR672\Desktop\watsonLeaveDemo\watsonxLeave)
+2024-01-22 10:56:45.168 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == No active profile set, falling back to 1 default profile: "default"
+2024-01-22 10:56:46.927 === [main] == [34mINFO [0;39m == o.s.boot.web.embedded.tomcat.TomcatWebServer == Tomcat initialized with port 8080 (http)
+2024-01-22 10:56:46.941 === [main] == [34mINFO [0;39m == org.apache.catalina.core.StandardService == Starting service [Tomcat]
+2024-01-22 10:56:46.941 === [main] == [34mINFO [0;39m == org.apache.catalina.core.StandardEngine == Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-22 10:56:47.012 === [main] == [34mINFO [0;39m == o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] == Initializing Spring embedded WebApplicationContext
+2024-01-22 10:56:47.013 === [main] == [34mINFO [0;39m == o.s.b.w.s.c.ServletWebServerApplicationContext == Root WebApplicationContext: initialization completed in 1699 ms
+2024-01-22 10:56:47.135 === [main] == [31mWARN [0;39m == o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext == Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authenticationInterceptor': Lookup method resolution failed
+2024-01-22 10:56:47.137 === [main] == [34mINFO [0;39m == org.apache.catalina.core.StandardService == Stopping service [Tomcat]
+2024-01-22 10:56:47.182 === [main] == [34mINFO [0;39m == o.s.b.a.logging.ConditionEvaluationReportLogger == 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-01-22 10:56:47.215 === [main] == [1;31mERROR[0;39m == org.springframework.boot.SpringApplication == Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authenticationInterceptor': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:497)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:367)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1293)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:960)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:464)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1358)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1347)
+	at com.ibmz.watsonxLeave.WatsonxLeaveApplication.main(WatsonxLeaveApplication.java:10)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.ibmz.watsonxLeave.intercepter.AuthenticationInterceptor] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@d8f36092]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:475)
+	... 19 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: javax.servlet.http.HttpServletRequest
+	at java.base/java.lang.Class.getDeclaredMethodsImpl(Native Method)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:1180)
+	at java.base/java.lang.Class.getMethodSet(Class.java:1848)
+	at java.base/java.lang.Class.getMethods(Class.java:1774)
+	at org.springframework.util.ReflectionUtils.findDefaultMethodsOnInterfaces(ReflectionUtils.java:493)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:466)
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.servlet.http.HttpServletRequest
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:827)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:1095)
+	... 27 common frames omitted
+2024-01-22 10:58:09.771 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == Starting WatsonxLeaveApplication using Java 17.0.9 with PID 16808 (C:\Users\ZZ04MR672\Desktop\watsonLeaveDemo\watsonxLeave\target\classes started by BartZhang in C:\Users\ZZ04MR672\Desktop\watsonLeaveDemo\watsonxLeave)
+2024-01-22 10:58:09.774 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == No active profile set, falling back to 1 default profile: "default"
+2024-01-22 10:58:11.149 === [main] == [34mINFO [0;39m == o.s.boot.web.embedded.tomcat.TomcatWebServer == Tomcat initialized with port 8080 (http)
+2024-01-22 10:58:11.159 === [main] == [34mINFO [0;39m == org.apache.catalina.core.StandardService == Starting service [Tomcat]
+2024-01-22 10:58:11.159 === [main] == [34mINFO [0;39m == org.apache.catalina.core.StandardEngine == Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-22 10:58:11.236 === [main] == [34mINFO [0;39m == o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] == Initializing Spring embedded WebApplicationContext
+2024-01-22 10:58:11.236 === [main] == [34mINFO [0;39m == o.s.b.w.s.c.ServletWebServerApplicationContext == Root WebApplicationContext: initialization completed in 1343 ms
+2024-01-22 10:58:11.920 === [main] == [34mINFO [0;39m == o.s.boot.web.embedded.tomcat.TomcatWebServer == Tomcat started on port 8080 (http) with context path ''
+2024-01-22 10:58:11.938 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == Started WatsonxLeaveApplication in 3.07 seconds (process running for 3.856)
+2024-01-22 10:58:18.621 === [http-nio-8080-exec-3] == [34mINFO [0;39m == o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] == Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-22 10:58:18.621 === [http-nio-8080-exec-3] == [34mINFO [0;39m == org.springframework.web.servlet.DispatcherServlet == Initializing Servlet 'dispatcherServlet'
+2024-01-22 10:58:18.622 === [http-nio-8080-exec-3] == [34mINFO [0;39m == org.springframework.web.servlet.DispatcherServlet == Completed initialization in 0 ms
+2024-01-22 10:58:22.769 === [http-nio-8080-exec-7] == [34mINFO [0;39m == com.ibmz.watsonxLeave.service.TokenService == jwt token is eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImFkbSIsInBhc3N3b3JkIjoiYWJjIiwiZXhwIjoxNzA2MjQ5NzU4fQ.I9hDDeqKgXZKK7ohto2oILelnMl_9nobMsb7xJ2NLMA,header is eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9,payload is eyJ1c2VybmFtZSI6ImFkbSIsInBhc3N3b3JkIjoiYWJjIiwiZXhwIjoxNzA2MjQ5NzU4fQ 
+2024-01-22 10:59:30.392 === [main] == [34mINFO [0;39m == c.ibmz.watsonxLeave.WatsonxLeaveApplicationTests == Starting WatsonxLeaveApplicationTests using Java 17.0.9 with PID 8508 (started by BartZhang in C:\Users\ZZ04MR672\Desktop\watsonLeaveDemo\watsonxLeave)
+2024-01-22 10:59:30.395 === [main] == [34mINFO [0;39m == c.ibmz.watsonxLeave.WatsonxLeaveApplicationTests == No active profile set, falling back to 1 default profile: "default"
+2024-01-22 10:59:32.326 === [main] == [34mINFO [0;39m == c.ibmz.watsonxLeave.WatsonxLeaveApplicationTests == Started WatsonxLeaveApplicationTests in 2.47 seconds (process running for 4.249)
+2024-01-22 11:06:58.771 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == Starting WatsonxLeaveApplication using Java 17.0.9 with PID 6948 (C:\Users\ZZ04MR672\Desktop\watsonLeaveDemo\watsonxLeave\target\classes started by BartZhang in C:\Users\ZZ04MR672\Desktop\watsonLeaveDemo\watsonxLeave)
+2024-01-22 11:06:58.778 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == No active profile set, falling back to 1 default profile: "default"
+2024-01-22 11:07:00.305 === [main] == [34mINFO [0;39m == o.s.boot.web.embedded.tomcat.TomcatWebServer == Tomcat initialized with port 8080 (http)
+2024-01-22 11:07:00.325 === [main] == [34mINFO [0;39m == org.apache.catalina.core.StandardService == Starting service [Tomcat]
+2024-01-22 11:07:00.325 === [main] == [34mINFO [0;39m == org.apache.catalina.core.StandardEngine == Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-22 11:07:00.387 === [main] == [34mINFO [0;39m == o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] == Initializing Spring embedded WebApplicationContext
+2024-01-22 11:07:00.388 === [main] == [34mINFO [0;39m == o.s.b.w.s.c.ServletWebServerApplicationContext == Root WebApplicationContext: initialization completed in 1499 ms
+2024-01-22 11:07:01.086 === [main] == [34mINFO [0;39m == o.s.boot.web.embedded.tomcat.TomcatWebServer == Tomcat started on port 8080 (http) with context path ''
+2024-01-22 11:07:01.114 === [main] == [34mINFO [0;39m == com.ibmz.watsonxLeave.WatsonxLeaveApplication == Started WatsonxLeaveApplication in 3.277 seconds (process running for 3.938)

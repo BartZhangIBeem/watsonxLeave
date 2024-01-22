@@ -1,0 +1,18 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:db2://19af6446-6171-4641-8aba-9dcff8e1b6ff.c1ogj3sd0tgtu0lqde00.databases.appdomain.cloud:30699/bludb
+  datesource:
+    password: o5Nwlh3rbavWaXVs
+    username: vrn32906
+  jpa:
+    generate-ddl: true
+logging:
+  level:
+    root: info
+  file:
+    name: watsleave.log
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){yellow} %clr([%thread]){red}  %highlight(%-5level) %logger{50} -%msg%n"
+    file: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){yellow} === %clr([%thread]){red} == %highlight(%-5level) == %logger{50} == %msg%n"
