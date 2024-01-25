@@ -70,3 +70,9 @@ com.ibm.db2.jcc.am.SqlException: [jcc][10150][10300][4.33.31] 参数无效：未
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:857)
+2024-01-25 15:54:04.588 === [main] == [34mINFO [0;39m == c.ibmz.watsonxLeave.WatsonxLeaveApplicationTests == Starting WatsonxLeaveApplicationTests using Java 17.0.9 with PID 5444 (started by BartZhang in C:\Users\ZZ04MR672\Desktop\watsonLeaveDemo\watsonxLeave)
+2024-01-25 15:54:04.599 === [main] == [34mINFO [0;39m == c.ibmz.watsonxLeave.WatsonxLeaveApplicationTests == No active profile set, falling back to 1 default profile: "default"
+2024-01-25 15:54:06.634 === [main] == [34mINFO [0;39m == c.ibmz.watsonxLeave.WatsonxLeaveApplicationTests == Started WatsonxLeaveApplicationTests in 2.413 seconds (process running for 4.095)
+2024-01-25 15:55:33.249 === [main] == [34mINFO [0;39m == c.ibmz.watsonxLeave.WatsonxLeaveApplicationTests == Starting WatsonxLeaveApplicationTests using Java 17.0.9 with PID 25580 (started by BartZhang in C:\Users\ZZ04MR672\Desktop\watsonLeaveDemo\watsonxLeave)
+2024-01-25 15:55:33.254 === [main] == [34mINFO [0;39m == c.ibmz.watsonxLeave.WatsonxLeaveApplicationTests == No active profile set, falling back to 1 default profile: "default"
+2024-01-25 15:55:35.380 === [main] == [34mINFO [0;39m == c.ibmz.watsonxLeave.WatsonxLeaveApplicationTests == Started WatsonxLeaveApplicationTests in 2.531 seconds (process running for 4.106)
