@@ -1,9 +1,7 @@
 package com.ibmz.watsonxLeave.controller;
 
 import com.alibaba.fastjson2.JSON;
-import com.alibaba.fastjson2.JSONObject;
-import com.ibmz.watsonxLeave.dto.Employee;
-import com.ibmz.watsonxLeave.dto.LoginUser;
+import com.ibmz.watsonxLeave.pojo.LoginUser;
 import com.ibmz.watsonxLeave.service.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;

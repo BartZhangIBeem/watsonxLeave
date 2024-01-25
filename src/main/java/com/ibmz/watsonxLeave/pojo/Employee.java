@@ -1,4 +1,4 @@
-package com.ibmz.watsonxLeave.dto;
+package com.ibmz.watsonxLeave.pojo;
 
 //import jakarta.persistence.Table;
 import lombok.*;

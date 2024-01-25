@@ -24,9 +24,7 @@ TokenService tokenService;
         if (handler instanceof HandlerMethod) {
             HandlerMethod handlerMethod = (HandlerMethod) handler;
             Method method = handlerMethod.getMethod();
-            // 获取注解
             method.getAnnotation(AuthVerify.class);
-            //判断这个访问的路径是否满足要求
             return tokenService.verify(token);
 
         }

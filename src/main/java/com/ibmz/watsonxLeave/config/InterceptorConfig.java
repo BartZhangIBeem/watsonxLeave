@@ -15,6 +15,6 @@ public class InterceptorConfig implements WebMvcConfigurer {
                 //拦截
                 .addPathPatterns("/query/*")
                 //放行
-                .excludePathPatterns("/token");
+                .excludePathPatterns("/token").excludePathPatterns("/v3/api-docs");
     }
 }

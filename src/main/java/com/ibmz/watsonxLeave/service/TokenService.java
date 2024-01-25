@@ -5,7 +5,7 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
-import com.ibmz.watsonxLeave.dto.LoginUser;
+import com.ibmz.watsonxLeave.pojo.LoginUser;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 
@@ -14,10 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Log4j2
-/**
- * @author jinbin
- * @date 2018-07-08 21:04
- */
+
 @Service("TokenService")
 public class TokenService {
     public static int EXPIRE_DATE=60*60;

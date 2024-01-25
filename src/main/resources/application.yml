@@ -1,5 +1,9 @@
 server:
-  port: 8080
+  port: 443
+  ssl:
+    key-store-password: '123456'
+    key-store: classpath:leaveapi.p12
+    key-alias: leaveapihttps
 spring:
   datasource:
     url: jdbc:db2://19af6446-6171-4641-8aba-9dcff8e1b6ff.c1ogj3sd0tgtu0lqde00.databases.appdomain.cloud:30699/bludb
@@ -16,3 +20,6 @@ logging:
   pattern:
     console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){yellow} %clr([%thread]){red}  %highlight(%-5level) %logger{50} -%msg%n"
     file: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){yellow} === %clr([%thread]){red} == %highlight(%-5level) == %logger{50} == %msg%n"
+springdoc:
+  swagger-ui:
+    path: /swagger-ui-custom.html

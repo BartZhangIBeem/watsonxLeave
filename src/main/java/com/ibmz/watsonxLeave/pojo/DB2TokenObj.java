@@ -1,7 +1,6 @@
-package com.ibmz.watsonxLeave.dto;
+package com.ibmz.watsonxLeave.pojo;
 
 import lombok.Data;
-import lombok.Getter;
 
 @Data
 public class DB2TokenObj {
